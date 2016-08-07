@@ -36,7 +36,7 @@ public class NectarW {
 	private boolean debug;
 	
 	public NectarW(String pathToGraph, double[]betas, double alpha, String outputPath, int iteratioNumToStartMerge, int maxIterationsToRun, int percentageOfStableNodes, int firstPartMode, boolean debug) throws IOException{
-		this.runTimeLog = new PrintWriter(new BufferedWriter(new FileWriter("./NectarW-runTime.log", true)));		
+				
 		this.startTime = System.currentTimeMillis();
 		this.percentageOfStableNodes= percentageOfStableNodes;
 		this.betas= betas;
@@ -46,6 +46,9 @@ public class NectarW {
 		this.maxIterationsToRun = maxIterationsToRun;
 		this.pathToGraph = pathToGraph;		
 		this.debug = debug;
+		if(debug){
+			this.runTimeLog = new PrintWriter(new BufferedWriter(new FileWriter("./NectarW-runTime.log", true)));
+		}
 		this.g = new UndirectedUnweightedGraphW(Paths.get(pathToGraph));		
 		
 		TakeTime();
