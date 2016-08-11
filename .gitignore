@@ -1,3 +1,4 @@
 *.class
 bin/NECTAR/NECTARRandomTree.model
 bin/NECTAR/ReadMe.txt
+/bin/
